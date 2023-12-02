@@ -1,7 +1,9 @@
 ### execute
 
 ```cd day1```
+
 ```make```
+
 ```./trubuchet```
 
 ### question
