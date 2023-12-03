@@ -13,4 +13,23 @@ const CubeConundrum = (games) => {
   }, 0)
 }
 
-module.exports = CubeConundrum
+const CubeConundrumPart2 = (games) => {
+  return games.reduce((acc, game) => {
+    let [maxRed, maxGreen, maxBlue] = [0, 0, 0]
+    game.substr(game.indexOf(":") + 2).split("; ").forEach(subset => {
+      subset.split(", ").forEach((part) => {
+        let [num, color] = part.split(" ")
+        num = parseInt(num)
+        if (color === "red") maxRed = maxRed < num ? num : maxRed
+        if (color === "green") maxGreen = maxGreen < num ? num : maxGreen
+        if (color === "blue") maxBlue = maxBlue < num ? num : maxBlue
+      })
+    })
+    return acc + (maxRed * maxGreen * maxBlue)
+  }, 0)
+}
+
+module.exports = {
+  CubeConundrum,
+  CubeConundrumPart2
+} 

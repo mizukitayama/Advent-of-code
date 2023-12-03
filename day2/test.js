@@ -100,5 +100,8 @@ Game 98: 3 green, 3 blue, 2 red; 2 blue, 2 red, 1 green; 3 green, 5 blue
 Game 99: 11 green, 4 red, 12 blue; 9 red, 4 blue; 20 green, 6 blue
 Game 100: 12 red, 9 green; 12 red; 9 red, 3 green; 8 red, 4 blue, 4 green; 8 blue, 11 red, 2 green`
 
-const CubeConundrum = require('./src/CubeConundrum')
-console.log(CubeConundrum(test.split("\n")))
+const {CubeConundrum, CubeConundrumPart2} = require('./src/CubeConundrum')
+
+console.log("part1 : ", CubeConundrum(test.split("\n")))
+console.log("part2 : ", CubeConundrumPart2(test.split("\n")))
+
